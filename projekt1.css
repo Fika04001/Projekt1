@@ -1,0 +1,132 @@
+/*Stylar min lista/navigationsmeny, centrerar texten och tar bort punkterna*/
+ul{
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(73, 73, 73);
+}
+
+/*Skapar en klass för navigationsmenyn, vänsterjsuterar den, gör textfärgen vit, centrerar texten, lägger en padding, tar bort understrykninge, bestämmer textstorleken, gör bakgrundsfärgen svart*/
+li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+/*Ändrar text- och bakgrundsfärgen på aktiva länkar*/
+a:hover{
+    background-color: rgb(61, 61, 61);
+    color: black;
+}
+
+/*Ändrar text- och bakgrundsfärgen på  när man klickar på länkar*/
+a:active{
+    background-color: rgb(0, 219, 201);
+    color: white;
+}
+
+/*Ändrar bakgrundsfärgen, skapar grid, skapar mellanrum mellan grids, skapar två kolumner och fyra rader i griden, bestämmer platsen på olika delar i griden och deras namn*/
+body{
+    background-color: rgb(228, 228, 228);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 100px 400px 50px;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+
+/*Bestämmer headers plats i griden*/
+header{
+    grid-area: header;
+}
+
+/*Bestämmer footerns plats i griden*/
+footer{
+    grid-area: footer;
+}
+
+/*Bestämmer mains plats i griden*/
+main{
+    grid-area: main;
+}
+
+/*Bestämmer asides plats i griden*/
+aside{
+    grid-area: aside;
+}   
+
+/*Skapar en klass för centrerad text*/
+.center{
+    text-align: center;
+}
+
+/*Ger tabellen en gräns, bestämmer dess bredd, ger tabellen symetriskt utseende*/
+table{
+    border-collapse: collapse;
+    width: 500px;
+    table-layout: fixed;
+}
+
+/*Ger de olika delar i tabellen en border, gör dess bredd automatisk och ger varje rad höjden 35px*/
+td{
+    border: 1px solid black;
+    width: auto;
+    height: 35px;
+}
+
+/*Centrerar den högra texten i tabellen*/
+td:nth-child(2), td:nth-child(3){
+    text-align: center;
+}
+
+/*Ger den högra texten i tabellen en ljusgrön bakgrundsfärgen*/
+tr:nth-child(odd){
+    background-color: #6cda7e;
+}
+
+/*Ger varannan rad i tabellen en bakgrunds- och textfärg*/
+tr:nth-child(even){
+    background-color: rgb(202, 202, 202);
+    color: white;
+}
+
+/*Bestämmer tabellrubrikens textstorlek, vänsterjusterar texten och skapar en marginal under*/
+caption{
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 11px;
+}
+
+/*Skapar ett id med bredden 500px*/
+#bild1{
+    width: 500px;
+}
+
+/*Skapar ett id med bredden 700px*/
+#bild2{
+    width: 550px;
+}
+
+/*Skapar ett id med bredden 725px*/
+#bild3{
+    width: 725px;
+}
+
+/*Bestämmer fonten på rubriker och p-element*/
+h1, h2, p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Bestämmer textstorleken i nummerlistan*/
+li{
+    font-size: 22px;
+}
